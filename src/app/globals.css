@@ -4,9 +4,9 @@
 
 @font-face {
     font-family: 'Satoshi-Regular';
-    src: url('../../assets/fonts/Satoshi-Regular.woff2') format('woff2'),
-        url('../../assets/fonts/Satoshi-Regular.woff') format('woff'),
-        url('../../assets/fonts/Satoshi-Regular.ttf') format('truetype');
+    src: url('../../assets/fonts/satoshi/Satoshi-Regular.woff2') format('woff2'),
+        url('../../assets/fonts/satoshi/Satoshi-Regular.woff') format('woff'),
+        url('../../assets/fonts/satoshi/Satoshi-Regular.ttf') format('truetype');
     font-weight: 400;
     font-display: swap;
     font-style: normal;
