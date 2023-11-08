@@ -1,39 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import localFont from "next/font/local";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
-// const satoshi = localFont({
-//   src: [
-//     {
-//       path: "./assets/fonts/Satoshi-Light.ttf",
-//       weight: "300",
-//       style: "normal",
-//     },
-//     {
-//       path: "./assets/fonts/Satoshi-Medium.ttf",
-//       weight: "400",
-//       style: "italic",
-//     },
-//     {
-//       path: "./assets/fonts/Satoshi-Regular.ttf",
-//       weight: "500",
-//       style: "normal",
-//     },
-
-//     {
-//       path: "./assets/fonts/Satoshi-Bold.ttf",
-//       weight: "700",
-//       style: "normal",
-//     },
-//     {
-//       path: "./Roboto-BoldItalic.woff2",
-//       weight: "700",
-//       style: "italic",
-//     },
-//   ],
-// });
 
 export const metadata: Metadata = {
   title: "Create Next App",
