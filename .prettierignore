@@ -1,0 +1,9 @@
+/node_modules
+*.json
+*.md
+*.env
+*.prettierrc
+.next
+next-env.d.ts
+next-env.d.ts
+next.config.js

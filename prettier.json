@@ -1,0 +1,59 @@
+{
+    "overrides": [
+        {
+            "files": [
+                "*.{ts,tsx}"
+            ],
+            "options": {
+                "editor.defaultFormatter": "esbenp.prettier-vscode"
+            }
+        },
+        {
+            "files": [
+                "*.js"
+            ],
+            "options": {
+                "editor.defaultFormatter": "esbenp.prettier-vscode"
+            }
+        },
+        {
+            "files": [
+                "*.ts"
+            ],
+            "options": {
+                "editor.defaultFormatter": "esbenp.prettier-vscode"
+            }
+        },
+        {
+            "files": [
+                "*.css"
+            ],
+            "options": {
+                "editor.defaultFormatter": "vscode.css-language-features"
+            }
+        },
+        {
+            "files": [
+                "*.html"
+            ],
+            "options": {
+                "editor.defaultFormatter": "vscode.html-language-features"
+            }
+        },
+        {
+            "files": [
+                "*.json"
+            ],
+            "options": {
+                "editor.defaultFormatter": "vscode.json-language-features"
+            }
+        }
+    ],
+    "settings": {
+        "javascript.updateImportsOnFileMove.enabled": "always",
+        "window.zoomLevel": 1,
+        "editor.formatOnSave": true,
+        "npm.keybindingsChangedWarningShown": true,
+        "workbench.colorTheme": "Default Dark+ Experimental"
+    }
+}
