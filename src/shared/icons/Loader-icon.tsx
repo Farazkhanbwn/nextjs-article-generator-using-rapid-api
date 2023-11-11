@@ -1,9 +1,10 @@
 import React from "react";
-import { IconDimensions } from "../types/commons.types";
+import { IconProps } from "../types/commons.types";
 
-const LoaderIcon: React.FC<IconDimensions> = ({
+const LoaderIcon: React.FC<IconProps> = ({
   width = 200,
   height = 200,
+  fillColor = "#ee6123",
 }) => {
   return (
     <svg
@@ -22,7 +23,7 @@ const LoaderIcon: React.FC<IconDimensions> = ({
           ry="1.5"
           width="5"
           height="15"
-          fill="#ee6123"
+          fill={fillColor}
         >
           <animate
             attributeName="opacity"
@@ -42,7 +43,7 @@ const LoaderIcon: React.FC<IconDimensions> = ({
           ry="1.5"
           width="5"
           height="15"
-          fill="#ee6123"
+          fill={fillColor}
         >
           <animate
             attributeName="opacity"
@@ -62,7 +63,7 @@ const LoaderIcon: React.FC<IconDimensions> = ({
           ry="1.5"
           width="5"
           height="15"
-          fill="#ee6123"
+          fill={fillColor}
         >
           <animate
             attributeName="opacity"
@@ -82,7 +83,7 @@ const LoaderIcon: React.FC<IconDimensions> = ({
           ry="1.5"
           width="5"
           height="15"
-          fill="#ee6123"
+          fill={fillColor}
         >
           <animate
             attributeName="opacity"
@@ -102,7 +103,7 @@ const LoaderIcon: React.FC<IconDimensions> = ({
           ry="1.5"
           width="5"
           height="15"
-          fill="#ee6123"
+          fill={fillColor}
         >
           <animate
             attributeName="opacity"
@@ -122,7 +123,7 @@ const LoaderIcon: React.FC<IconDimensions> = ({
           ry="1.5"
           width="5"
           height="15"
-          fill="#ee6123"
+          fill={fillColor}
         >
           <animate
             attributeName="opacity"
@@ -142,7 +143,7 @@ const LoaderIcon: React.FC<IconDimensions> = ({
           ry="1.5"
           width="5"
           height="15"
-          fill="#ee6123"
+          fill={fillColor}
         >
           <animate
             attributeName="opacity"
@@ -162,7 +163,7 @@ const LoaderIcon: React.FC<IconDimensions> = ({
           ry="1.5"
           width="5"
           height="15"
-          fill="#ee6123"
+          fill={fillColor}
         >
           <animate
             attributeName="opacity"
@@ -182,7 +183,7 @@ const LoaderIcon: React.FC<IconDimensions> = ({
           ry="1.5"
           width="5"
           height="15"
-          fill="#ee6123"
+          fill={fillColor}
         >
           <animate
             attributeName="opacity"
@@ -202,7 +203,7 @@ const LoaderIcon: React.FC<IconDimensions> = ({
           ry="1.5"
           width="5"
           height="15"
-          fill="#ee6123"
+          fill={fillColor}
         >
           <animate
             attributeName="opacity"
@@ -222,7 +223,7 @@ const LoaderIcon: React.FC<IconDimensions> = ({
           ry="1.5"
           width="5"
           height="15"
-          fill="#ee6123"
+          fill={fillColor}
         >
           <animate
             attributeName="opacity"
@@ -242,7 +243,7 @@ const LoaderIcon: React.FC<IconDimensions> = ({
           ry="1.5"
           width="5"
           height="15"
-          fill="#ee6123"
+          fill={fillColor}
         >
           <animate
             attributeName="opacity"
@@ -262,7 +263,7 @@ const LoaderIcon: React.FC<IconDimensions> = ({
           ry="1.5"
           width="5"
           height="15"
-          fill="#ee6123"
+          fill={fillColor}
         >
           <animate
             attributeName="opacity"
@@ -282,7 +283,7 @@ const LoaderIcon: React.FC<IconDimensions> = ({
           ry="1.5"
           width="5"
           height="15"
-          fill="#ee6123"
+          fill={fillColor}
         >
           <animate
             attributeName="opacity"
@@ -302,7 +303,7 @@ const LoaderIcon: React.FC<IconDimensions> = ({
           ry="1.5"
           width="5"
           height="15"
-          fill="#ee6123"
+          fill={fillColor}
         >
           <animate
             attributeName="opacity"

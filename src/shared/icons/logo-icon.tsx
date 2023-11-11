@@ -1,10 +1,7 @@
 import React from "react";
-import { IconDimensions } from "../types/commons.types";
+import { IconProps } from "../types/commons.types";
 
-const LogoIcon: React.FC<IconDimensions> = ({
-  width = "90",
-  height = "30",
-}) => {
+const LogoIcon: React.FC<IconProps> = ({ width = "90", height = "30" }) => {
   return (
     <svg
       width={width}

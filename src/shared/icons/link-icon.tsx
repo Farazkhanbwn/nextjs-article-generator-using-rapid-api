@@ -1,12 +1,16 @@
 import React from "react";
-import { IconDimensions } from "../types/commons.types";
+import { IconProps } from "../types/commons.types";
 
-const LinkIcon: React.FC<IconDimensions> = ({ width = 24, height = 24 }) => {
+const LinkIcon: React.FC<IconProps> = ({
+  width = 24,
+  height = 24,
+  fillColor = "#333",
+}) => {
   return (
     <svg
       fill="none"
       shapeRendering="geometricPrecision"
-      stroke="currentColor"
+      stroke={fillColor}
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth="1.5"

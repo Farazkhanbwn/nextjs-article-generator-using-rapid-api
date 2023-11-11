@@ -1,10 +1,14 @@
 import React from "react";
-import { IconDimensions } from "../types/commons.types";
+import { IconProps } from "../types/commons.types";
 
-const TickIcon: React.FC<IconDimensions> = ({ width = 14, height = 14 }) => {
+const TickIcon: React.FC<IconProps> = ({
+  width = 14,
+  height = 14,
+  fillColor = "#333",
+}) => {
   return (
     <svg
-      stroke="currentColor"
+      stroke={fillColor}
       viewBox="0 0 24 24"
       width={width}
       height={height}

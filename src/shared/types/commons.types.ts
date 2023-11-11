@@ -1,4 +1,5 @@
-export interface IconDimensions {
-  width?: number | string;
-  height?: number | string;
+export interface IconProps {
+  width?: number;
+  height?: number;
+  fillColor?: string;
 }
