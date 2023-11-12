@@ -8,5 +8,4 @@ export interface HeaderTitleProps {
 export interface HeaderDescProps {
   text: string;
   className?: string;
-  hide?: boolean;
 }
