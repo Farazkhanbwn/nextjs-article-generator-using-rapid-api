@@ -4,7 +4,7 @@ import HeaderDesc from "./header-heading/header-description";
 
 import Navbar from "../navbar";
 
-const HeaderSection = () => {
+const Header = () => {
   return (
     <header>
       <Navbar />
@@ -20,4 +20,4 @@ const HeaderSection = () => {
   );
 };
 
-export default HeaderSection;
+export default Header;

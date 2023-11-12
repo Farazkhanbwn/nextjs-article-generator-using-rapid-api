@@ -1,4 +1,4 @@
-import HeaderSection from "@/shared/components/header/header-section";
+import HeaderSection from "@/shared/components/header/header";
 import React from "react";
 
 const HomePage = () => {
