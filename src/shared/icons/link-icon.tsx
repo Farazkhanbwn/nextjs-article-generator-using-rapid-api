@@ -5,6 +5,7 @@ const LinkIcon: React.FC<IconProps> = ({
   width = 24,
   height = 24,
   fillColor = "#333",
+  className,
 }) => {
   return (
     <svg
@@ -20,6 +21,7 @@ const LinkIcon: React.FC<IconProps> = ({
       version="1.1"
       id="svg6"
       xmlns="http://www.w3.org/2000/svg"
+      className={className}
     >
       <path
         d="M15 7h3a5 5 0 015 5 5 5 0 01-5 5h-3m-6 0H6a5 5 0 01-5-5 5 5 0 015-5h3"
