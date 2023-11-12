@@ -8,7 +8,7 @@ import EnterIcon from "@/shared/icons/enter-icon";
 
 const CustomInput = () => {
   return (
-    <form className="relative max-w-xl w-full mx-auto">
+    <form className="relative max-w-xl w-full mx-auto mb-3">
       <LinkIcon
         className="absolute left-2 top-3"
         width={20}
