@@ -6,7 +6,7 @@ import Navbar from "../navbar";
 
 const Header = () => {
   return (
-    <header>
+    <header className="mb-8">
       <Navbar />
       <HeaderTitle
         title="Summarize Articles with"
