@@ -1,12 +1,12 @@
 import React from "react";
-import { CustomInputField } from "./custom-input-field/custom-input-field";
-import { CustomInputType } from "./custom-input.types";
+import { CustomInputField } from "../custom-input-field/custom-input-field";
+import { CustomInputType } from "../custom-input-field/custom-input.types";
 import LinkIcon from "@/shared/icons/link-icon";
 import CustomButton from "../custom-button/custom-button";
 import { CustomButtonTypes } from "../custom-button/custom-button.types";
 import EnterIcon from "@/shared/icons/enter-icon";
 
-const CustomInput = () => {
+const UrlInputForm = () => {
   return (
     <form className="relative max-w-xl w-full mx-auto mb-3">
       <LinkIcon
@@ -32,4 +32,4 @@ const CustomInput = () => {
   );
 };
 
-export default CustomInput;
+export default UrlInputForm;
