@@ -1,7 +1,7 @@
 import React from "react";
-import { CustomInputProps } from "../custom-input.types";
+import { CustomInputFieldProps } from "./custom-input.types";
 
-export const CustomInputField: React.FC<CustomInputProps> = ({
+export const CustomInputField: React.FC<CustomInputFieldProps> = ({
   name,
   type,
   placeholder = "",

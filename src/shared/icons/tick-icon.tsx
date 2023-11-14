@@ -8,14 +8,15 @@ const TickIcon: React.FC<IconProps> = ({
 }) => {
   return (
     <svg
-      stroke={fillColor}
-      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 48 48"
       width={width}
       height={height}
-      id="svg4"
-      xmlns="http://www.w3.org/2000/svg"
     >
-      <path d="M20 6L9 17l-5-5" id="path2" />
+      <path
+        fill={fillColor}
+        d="M40.6 12.1L17 35.7 7.4 26.1 4.6 29 17 41.3 43.4 14.9z"
+      />
     </svg>
   );
 };
