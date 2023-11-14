@@ -9,7 +9,7 @@ const UrlList = () => {
   };
 
   return (
-    <div>
+    <div className="mb-4">
       <UrlListItem url="www.google.com.pk" setUrl={handleSelectedUrl} />
     </div>
   );
