@@ -1,10 +1,10 @@
 import React from "react";
-import { CustomInputField } from "../custom-input-field/custom-input-field";
-import { CustomInputType } from "../custom-input-field/custom-input.types";
+import EnterIcon from "@/shared/icons/enter-icon";
 import LinkIcon from "@/shared/icons/link-icon";
 import CustomButton from "../custom-button/custom-button";
 import { CustomButtonTypes } from "../custom-button/custom-button.types";
-import EnterIcon from "@/shared/icons/enter-icon";
+import { CustomInputField } from "../custom-input-field/custom-input-field";
+import { CustomInputFieldType } from "../custom-input-field/custom-input.types";
 
 const UrlInputForm = () => {
   return (
@@ -17,7 +17,7 @@ const UrlInputForm = () => {
       />
 
       <CustomInputField
-        type={CustomInputType.URL}
+        type={CustomInputFieldType.URL}
         placeholder="Enter Your URL"
         className="input-field"
       />

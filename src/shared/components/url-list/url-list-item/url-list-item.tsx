@@ -33,8 +33,8 @@ const UrlListItem: React.FC<UrlListProps> = ({ url, setUrl }) => {
 
   return (
     <div
-      className={`${urlListFieldStyles}  `}
-      onClick={() => setUrlWithSetTickIcon(url)}
+      className={`${urlListFieldStyles}`}
+      onClick={() => setUrlWithSetTickIcon}
     >
       <div className={`${urlListFieldIconStyles} `}>
         {renderCopyOrTickIcon()}
