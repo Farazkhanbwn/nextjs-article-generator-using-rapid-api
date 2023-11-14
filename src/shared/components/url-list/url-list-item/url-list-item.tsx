@@ -26,16 +26,13 @@ const UrlListItem: React.FC<UrlListProps> = ({ url, setUrl }) => {
     return <CopyIcon width={16} height={16} fillColor="#999" />;
   };
 
-  const setUrlWithSetTickIcon = (url: string) => {
+  const setUrlWithSetTickIcon = () => {
     setUrl(url);
     triggerTickIconAnimation();
   };
 
   return (
-    <div
-      className={`${urlListFieldStyles}`}
-      onClick={() => setUrlWithSetTickIcon}
-    >
+    <div className={`${urlListFieldStyles}`} onClick={setUrlWithSetTickIcon}>
       <div className={`${urlListFieldIconStyles} `}>
         {renderCopyOrTickIcon()}
       </div>
