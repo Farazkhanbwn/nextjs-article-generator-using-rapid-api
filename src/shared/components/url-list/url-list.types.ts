@@ -1,4 +1,4 @@
 export interface UrlListProps {
   url: string;
-  setUrl: () => void;
+  setUrl: (url: string) => void;
 }

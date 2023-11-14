@@ -14,8 +14,8 @@ const LogoIcon: React.FC<IconProps> = ({ width = "90", height = "30" }) => {
     >
       <defs id="SvgjsDefs10989">
         <linearGradient id="SvgjsLinearGradient10994">
-          <stop id="SvgjsStop10995" stop-color="#ef4136" offset="0" />
-          <stop id="SvgjsStop10996" stop-color="#fbb040" offset="1" />
+          <stop id="SvgjsStop10995" stopColor="#ef4136" offset="0" />
+          <stop id="SvgjsStop10996" stopColor="#fbb040" offset="1" />
         </linearGradient>
       </defs>
       <g
