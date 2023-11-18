@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import EnterIcon from "@/shared/icons/enter-icon";
 import LinkIcon from "@/shared/icons/link-icon";
 import CustomButton from "../custom-button/custom-button";
@@ -9,10 +9,12 @@ import { CustomInputFieldType } from "../custom-input-field/custom-input.types";
 import ArticleSummaryService from "@/shared/services/article-summary-service";
 
 const UrlInputForm = () => {
-  const [articleUrl, setArticleUrl] = useState<string>("");
-
   const submitUrl = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    const formData = new FormData(e.currentTarget);
+    const articleUrl = formData.get("url-input-field") as string;
+
     const summaryData =
       await ArticleSummaryService.getArticleSummary(articleUrl);
     // log summaryData console can be removed after
@@ -35,7 +37,8 @@ const UrlInputForm = () => {
         type={CustomInputFieldType.URL}
         placeholder="Enter Your URL"
         className="input-field"
-        onChange={(e) => setArticleUrl(e.target.value)}
+        name="url-input-field"
+        // onChange={(e) => setArticleUrl(e.target.value)}
       />
 
       <CustomButton
