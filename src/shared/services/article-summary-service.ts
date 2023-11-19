@@ -23,7 +23,7 @@ class ArticleSummaryService extends HttpClient {
     const urlPath = ArticleSummaryEndpoints.SEARCH_ARTICLE.replace(
       ":url",
       encodedArticleURL,
-    ).replace(":paragraphCount", `${articleParagraphsCount ?? 0}`);
+    ).replace(":paragraphCount", `${articleParagraphsCount ?? 3}`);
 
     const data = await this.get(urlPath, {
       ...rapidApiCredentials,
