@@ -11,7 +11,6 @@ export const createArticleActionTypeReducer = (
     })
     .addCase(fetchArticleSummaryForUrl.fulfilled, (state, action) => {
       state.isLoading = false;
-      console.log(action.payload);
       state.summary = action.payload.message;
     });
 };
