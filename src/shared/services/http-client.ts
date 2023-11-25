@@ -7,8 +7,6 @@ enum HttpRequestMethods {
 
 const API_ENDPOINT = process.env.NEXT_PUBLIC_RAPID_API_ENDPOINT;
 
-console.log("API_ENDPOINT is : " + API_ENDPOINT);
-
 const headerConfig = { "Content-Type": "application/json" };
 
 class HttpClient {

@@ -2,6 +2,7 @@ import React from "react";
 import Header from "@/shared/components/header/header";
 import UrlList from "@/shared/components/url-list/url-list";
 import UrlInputForm from "@/shared/components/url-input-form/url-input-form";
+import ArticleSummary from "@/shared/components/article-summary/article-summary";
 
 const HomePage = () => {
   return (
@@ -10,6 +11,7 @@ const HomePage = () => {
         <Header />
         <UrlInputForm />
         <UrlList />
+        <ArticleSummary />
       </div>
     </main>
   );
