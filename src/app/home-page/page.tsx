@@ -5,6 +5,7 @@ import UrlInputForm from "@/shared/components/url-input-form/url-input-form";
 import ArticleSummary from "@/shared/components/article-summary/article-summary";
 
 const HomePage = () => {
+  console.log("first");
   return (
     <main className="relative max-w-7xl mx-auto sm:px-16 px-6">
       <div className="container">

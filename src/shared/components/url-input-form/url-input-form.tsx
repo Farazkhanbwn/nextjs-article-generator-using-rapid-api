@@ -12,7 +12,7 @@ import { fetchArticleSummaryForUrl } from "@/shared/store/slices/article-slice/a
 const UrlInputForm = () => {
   const dispatch = useDispatch<AppDispatch>();
 
-  const fetchAndDispatchArticleSummary = (e: FormEvent<HTMLFormElement>) => {
+  const onSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
     const url = formData.get("url-input") as string;
@@ -20,10 +20,7 @@ const UrlInputForm = () => {
   };
 
   return (
-    <form
-      className="relative max-w-xl w-full mx-auto mb-3"
-      onSubmit={fetchAndDispatchArticleSummary}
-    >
+    <form className="relative max-w-xl w-full mx-auto mb-3" onSubmit={onSubmit}>
       <LinkIcon
         className="absolute left-2 top-3"
         width={20}
