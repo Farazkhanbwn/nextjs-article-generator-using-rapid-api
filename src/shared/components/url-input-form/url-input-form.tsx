@@ -5,25 +5,20 @@ import CustomButton from "../custom-button/custom-button";
 import { CustomButtonTypes } from "../custom-button/custom-button.types";
 import { CustomInputField } from "../custom-input-field/custom-input-field";
 import { CustomInputFieldType } from "../custom-input-field/custom-input.types";
-import { useDispatch } from "react-redux";
-import { AppDispatch } from "@/shared/store/store";
-import { fetchArticleSummaryForUrl } from "@/shared/store/slices/article-slice/article-slice-thunk";
+import useArticleStore from "@/shared/hooks/use-article-store";
 
 const UrlInputForm = () => {
-  const dispatch = useDispatch<AppDispatch>();
+  const { generateArticleSummaryFromUrlForStore } = useArticleStore();
 
-  const fetchAndDispatchArticleSummary = (e: FormEvent<HTMLFormElement>) => {
+  const onSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
     const url = formData.get("url-input") as string;
-    dispatch(fetchArticleSummaryForUrl(url));
+    generateArticleSummaryFromUrlForStore(url);
   };
 
   return (
-    <form
-      className="relative max-w-xl w-full mx-auto mb-3"
-      onSubmit={fetchAndDispatchArticleSummary}
-    >
+    <form className="relative max-w-xl w-full mx-auto mb-3" onSubmit={onSubmit}>
       <LinkIcon
         className="absolute left-2 top-3"
         width={20}

@@ -1,12 +1,9 @@
 import React from "react";
 import PageContainer from "../page-container/page-container";
-import { useSelector } from "react-redux";
-import { RootState } from "@/shared/store/store";
+import useArticleStore from "@/shared/hooks/use-article-store";
 
 const ArticleSummary = () => {
-  const { summary, isLoading } = useSelector(
-    (state: RootState) => state.article,
-  );
+  const { summary, isLoading } = useArticleStore();
 
   if (!summary && !isLoading) {
     return null;
