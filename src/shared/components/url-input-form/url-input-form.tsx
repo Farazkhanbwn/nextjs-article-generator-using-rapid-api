@@ -5,29 +5,16 @@ import CustomButton from "../custom-button/custom-button";
 import { CustomButtonTypes } from "../custom-button/custom-button.types";
 import { CustomInputField } from "../custom-input-field/custom-input-field";
 import { CustomInputFieldType } from "../custom-input-field/custom-input.types";
-import ArticleSummaryService from "@/shared/services/article-summary-service";
+import { useArticleContext } from "@/shared/context/article-context";
 
-interface UrlInputFormProps {
-  onSubmitUrlInputForm: (url: string, summary: string) => void;
-  beforeSubmitUrlInputForm: () => void;
-}
-const UrlInputForm: React.FC<UrlInputFormProps> = ({
-  onSubmitUrlInputForm,
-  beforeSubmitUrlInputForm,
-}) => {
+const UrlInputForm = () => {
+  const { generateArticleSummaryFromUrlForStore } = useArticleContext();
+
   const handleSubmitForm = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
-    const articleUrl = formData.get("form-input-field") as string;
-    console.log("article Url is : ", articleUrl);
-    beforeSubmitUrlInputForm();
-    const articleSummary =
-      await ArticleSummaryService.getArticleSummary(articleUrl);
-    const { summary } = articleSummary;
-    console.log("articlesummary si : ", articleSummary);
-    console.log("summary is : ", summary);
-
-    onSubmitUrlInputForm(articleUrl, summary);
+    const url = formData.get("form-input-field") as string;
+    generateArticleSummaryFromUrlForStore(url);
   };
   return (
     <form

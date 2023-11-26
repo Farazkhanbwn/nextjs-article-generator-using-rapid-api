@@ -1,18 +1,18 @@
 import React from "react";
 import PageContainer from "../page-container/page-container";
+import { useArticleContext } from "@/shared/context/article-context";
 
-interface ArticleSummaryProps {
-  description: string;
-  loading: boolean;
-}
+const ArticleSummary = ({}) => {
+  const { summary, isLoading } = useArticleContext();
+  console.log("Rendered");
 
-const ArticleSummary: React.FC<ArticleSummaryProps> = ({
-  description,
-  loading,
-}) => {
+  if (!summary && !isLoading) {
+    return null;
+  }
+
   return (
     <PageContainer
-      loading={loading}
+      loading={isLoading}
       className="flex flex-col gap-1 max-w-xl mx-auto"
     >
       <h2 className="font-satoshi font-bold text-gray-600 text-xl">
@@ -23,7 +23,7 @@ const ArticleSummary: React.FC<ArticleSummaryProps> = ({
       </h2>
       <div className="rounded-xl border border-gray-200 bg-white/20 backdrop-blur p-4">
         <p className="font-inter font-medium text-sm text-gray-700">
-          {description}
+          {summary}
         </p>
       </div>
     </PageContainer>
