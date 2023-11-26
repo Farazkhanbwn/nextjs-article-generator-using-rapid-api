@@ -5,16 +5,16 @@ import CustomButton from "../custom-button/custom-button";
 import { CustomButtonTypes } from "../custom-button/custom-button.types";
 import { CustomInputField } from "../custom-input-field/custom-input-field";
 import { CustomInputFieldType } from "../custom-input-field/custom-input.types";
-import UseArticleStore from "@/shared/hooks/use-article-store";
+import useArticleStore from "@/shared/hooks/use-article-store";
 
 const UrlInputForm = () => {
-  const { fetchArticleSummary } = UseArticleStore();
+  const { getSummaryDescription } = useArticleStore();
 
   const onSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
     const url = formData.get("url-input") as string;
-    fetchArticleSummary(url);
+    getSummaryDescription(url);
   };
 
   return (

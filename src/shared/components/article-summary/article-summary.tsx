@@ -1,9 +1,9 @@
 import React from "react";
 import PageContainer from "../page-container/page-container";
-import UseArticleStore from "@/shared/hooks/use-article-store";
+import useArticleStore from "@/shared/hooks/use-article-store";
 
 const ArticleSummary = () => {
-  const { summary, isLoading } = UseArticleStore();
+  const { summary, isLoading } = useArticleStore();
 
   if (!summary && !isLoading) {
     return null;
