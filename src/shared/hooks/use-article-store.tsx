@@ -9,11 +9,11 @@ const useArticleStore = () => {
 
   const dispatch = useDispatch<AppDispatch>();
 
-  const getSummaryDescription = (url: string) => {
+  const generateArticleSummaryFromUrlForStore = (url: string) => {
     dispatch(fetchArticleSummaryForUrl(url));
   };
 
-  return { summary, isLoading, getSummaryDescription };
+  return { summary, isLoading, generateArticleSummaryFromUrlForStore };
 };
 
 export default useArticleStore;

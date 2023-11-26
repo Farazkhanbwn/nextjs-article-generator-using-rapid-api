@@ -8,13 +8,13 @@ import { CustomInputFieldType } from "../custom-input-field/custom-input.types";
 import useArticleStore from "@/shared/hooks/use-article-store";
 
 const UrlInputForm = () => {
-  const { getSummaryDescription } = useArticleStore();
+  const { generateArticleSummaryFromUrlForStore } = useArticleStore();
 
   const onSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
     const url = formData.get("url-input") as string;
-    getSummaryDescription(url);
+    generateArticleSummaryFromUrlForStore(url);
   };
 
   return (
