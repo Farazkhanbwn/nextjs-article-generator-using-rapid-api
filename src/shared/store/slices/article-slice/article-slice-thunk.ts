@@ -5,6 +5,9 @@ export const fetchArticleSummaryForUrl = createAsyncThunk(
   "article/createArticleActionTypeReducer",
   async (articleUrl: string) => {
     const data = await ArticleSummaryService.getArticleSummary(articleUrl);
-    return data;
+    return {
+      ...data,
+      articleUrl,
+    };
   },
 );

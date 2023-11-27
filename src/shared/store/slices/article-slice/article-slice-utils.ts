@@ -1,12 +1,11 @@
-import { ActionReducerMapBuilder, PayloadAction } from "@reduxjs/toolkit";
+import { ActionReducerMapBuilder } from "@reduxjs/toolkit";
 import { ArticleStoreState } from "./article-slice.interface";
 import { fetchArticleSummaryForUrl } from "./article-slice-thunk";
 
-export const addArticleUrlToList = (
-  state: ArticleStoreState,
-  action: PayloadAction<string>,
+export const saveGeneratedArticleSummaryUrlsSnapshot = (
+  urlList: Array<string>,
 ) => {
-  state.urlList.unshift(action.payload);
+  localStorage.setItem("urls", JSON.stringify(urlList));
 };
 
 export const createArticleActionTypeReducer = (
@@ -19,5 +18,7 @@ export const createArticleActionTypeReducer = (
     .addCase(fetchArticleSummaryForUrl.fulfilled, (state, action) => {
       state.isLoading = false;
       state.summary = action.payload.message;
+      state.urlList.unshift(action.payload.articleUrl);
+      saveGeneratedArticleSummaryUrlsSnapshot(state.urlList);
     });
 };
