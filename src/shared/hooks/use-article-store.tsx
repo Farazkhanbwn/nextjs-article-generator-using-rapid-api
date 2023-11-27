@@ -1,9 +1,10 @@
+import { addUrlToList } from "../store/slices/article-slice/article-slice-reducer";
 import { fetchArticleSummaryForUrl } from "../store/slices/article-slice/article-slice-thunk";
 import { AppDispatch, RootState } from "../store/store";
 import { useDispatch, useSelector } from "react-redux";
 
 const useArticleStore = () => {
-  const { summary, isLoading } = useSelector(
+  const { summary, isLoading, urlList } = useSelector(
     (state: RootState) => state.article,
   );
 
@@ -13,7 +14,17 @@ const useArticleStore = () => {
     dispatch(fetchArticleSummaryForUrl(url));
   };
 
-  return { summary, isLoading, generateArticleSummaryFromUrlForStore };
+  const generateArticleUrlsFromUrlForStore = (url: string) => {
+    dispatch(addUrlToList(url));
+  };
+
+  return {
+    summary,
+    isLoading,
+    urlList,
+    generateArticleSummaryFromUrlForStore,
+    generateArticleUrlsFromUrlForStore,
+  };
 };
 
 export default useArticleStore;
