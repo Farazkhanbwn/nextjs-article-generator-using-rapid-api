@@ -21,6 +21,13 @@ export const updateUrls = (
   state.urlList = action.payload;
 };
 
+export const setSelectedUrl = (
+  state: ArticleStoreState,
+  action: PayloadAction<string>,
+) => {
+  state.selectedUrl = action.payload;
+};
+
 export const createArticleActionTypeReducer = (
   builder: ActionReducerMapBuilder<ArticleStoreState>,
 ) => {

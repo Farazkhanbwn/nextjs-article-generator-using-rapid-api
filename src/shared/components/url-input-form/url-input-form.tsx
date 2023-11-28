@@ -8,8 +8,12 @@ import { CustomInputFieldType } from "../custom-input-field/custom-input.types";
 import useArticleStore from "@/shared/hooks/use-article-store";
 
 const UrlInputForm = () => {
-  const { generateArticleDataFromUrlForStore, updateUrlsList } =
-    useArticleStore();
+  const {
+    generateArticleDataFromUrlForStore,
+    updateUrlsList,
+    selectedUrl,
+    setSelectedUrlActionForStore,
+  } = useArticleStore();
 
   useEffect(() => {
     const localData = localStorage.getItem("urls");
@@ -41,8 +45,8 @@ const UrlInputForm = () => {
         placeholder="Enter Your URL"
         className="input-field"
         name="url-input"
-        // value={}
-        onChange={(e) => e.target.value}
+        value={selectedUrl}
+        onChange={(e) => setSelectedUrlActionForStore(e.target.value)}
       />
 
       <CustomButton

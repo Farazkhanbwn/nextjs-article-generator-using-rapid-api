@@ -3,6 +3,7 @@ import { articleStoreDefaults } from "./article-slice.interface";
 import {
   createArticleActionTypeReducer,
   updateUrls,
+  setSelectedUrl,
 } from "./article-slice-utils";
 
 const articleSlice = createSlice({
@@ -11,12 +12,13 @@ const articleSlice = createSlice({
 
   reducers: {
     updateUrlList: updateUrls,
+    setSelectedUrlReducer: setSelectedUrl,
   },
 
   extraReducers: (builder) => createArticleActionTypeReducer(builder),
 });
 
 const { reducer: articleReducer, actions } = articleSlice;
-const { updateUrlList } = actions;
-export { updateUrlList };
-export { articleReducer };
+const { setSelectedUrlReducer, updateUrlList } = actions;
+
+export { articleReducer, updateUrlList, setSelectedUrlReducer };
