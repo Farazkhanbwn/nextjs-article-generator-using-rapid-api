@@ -12,7 +12,7 @@ const UrlList = () => {
   };
 
   return (
-    <div className="mb-4">
+    <div className="mb-4 max-w-xl mx-auto flex flex-col gap-1.5">
       {urlList.map((url, key) => {
         return <UrlListItem url={url} key={key} setUrl={handleSelectedUrl} />;
       })}
