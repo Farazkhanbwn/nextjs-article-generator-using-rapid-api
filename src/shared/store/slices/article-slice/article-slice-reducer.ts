@@ -1,15 +1,22 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { articleStoreDefaults } from "./article-slice.interface";
-import { createArticleActionTypeReducer } from "./article-slice-utils";
+import {
+  createArticleActionTypeReducer,
+  setSelectedUrl,
+} from "./article-slice-utils";
 
 const articleSlice = createSlice({
   name: "article",
   initialState: articleStoreDefaults,
 
-  reducers: {},
+  reducers: {
+    setSelectedUrlReducer: setSelectedUrl,
+  },
 
   extraReducers: (builder) => createArticleActionTypeReducer(builder),
 });
 
-const { reducer: articleReducer } = articleSlice;
+const { reducer: articleReducer, actions } = articleSlice;
+const { setSelectedUrlReducer } = actions;
+export { setSelectedUrlReducer };
 export { articleReducer };
