@@ -1,11 +1,13 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { articleStoreDefaults } from "./article-slice.interface";
-import { createArticleActionTypeReducer } from "./article-slice-builders";
+import { createArticleActionTypeReducer } from "./article-slice-utils";
 
 const articleSlice = createSlice({
   name: "article",
   initialState: articleStoreDefaults,
+
   reducers: {},
+
   extraReducers: (builder) => createArticleActionTypeReducer(builder),
 });
 

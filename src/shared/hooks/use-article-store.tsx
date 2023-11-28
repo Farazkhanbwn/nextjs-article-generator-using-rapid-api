@@ -3,17 +3,22 @@ import { AppDispatch, RootState } from "../store/store";
 import { useDispatch, useSelector } from "react-redux";
 
 const useArticleStore = () => {
-  const { summary, isLoading } = useSelector(
+  const { summary, isLoading, urlList } = useSelector(
     (state: RootState) => state.article,
   );
 
   const dispatch = useDispatch<AppDispatch>();
 
-  const generateArticleSummaryFromUrlForStore = (url: string) => {
+  const generateArticleDataFromUrlForStore = (url: string) => {
     dispatch(fetchArticleSummaryForUrl(url));
   };
 
-  return { summary, isLoading, generateArticleSummaryFromUrlForStore };
+  return {
+    summary,
+    isLoading,
+    urlList,
+    generateArticleDataFromUrlForStore,
+  };
 };
 
 export default useArticleStore;
