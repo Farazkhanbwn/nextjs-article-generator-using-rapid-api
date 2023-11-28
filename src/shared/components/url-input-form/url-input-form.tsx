@@ -1,3 +1,4 @@
+"use client";
 import React, { FormEvent, useEffect } from "react";
 import EnterIcon from "@/shared/icons/enter-icon";
 import LinkIcon from "@/shared/icons/link-icon";
