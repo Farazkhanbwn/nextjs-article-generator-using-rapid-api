@@ -8,7 +8,11 @@ import { CustomInputFieldType } from "../custom-input-field/custom-input.types";
 import useArticleStore from "@/shared/hooks/use-article-store";
 
 const UrlInputForm = () => {
-  const { generateArticleDataFromUrlForStore } = useArticleStore();
+  const {
+    selectedUrl,
+    generateArticleDataFromUrlForStore,
+    setSelectedUrlActionForStore,
+  } = useArticleStore();
 
   const onSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -16,6 +20,8 @@ const UrlInputForm = () => {
     const url = formData.get("url-input") as string;
     generateArticleDataFromUrlForStore(url);
   };
+
+  console.log("selected Url is : ", selectedUrl);
 
   return (
     <form className="relative max-w-xl w-full mx-auto mb-3" onSubmit={onSubmit}>
@@ -31,8 +37,8 @@ const UrlInputForm = () => {
         placeholder="Enter Your URL"
         className="input-field"
         name="url-input"
-        // value={}
-        onChange={(e) => e.target.value}
+        value={selectedUrl}
+        onChange={(e) => setSelectedUrlActionForStore(e.target.value)}
       />
 
       <CustomButton
