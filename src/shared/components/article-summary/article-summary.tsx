@@ -11,7 +11,7 @@ const ArticleSummary = () => {
   return (
     <PageContainer
       loading={isLoading}
-      className="flex flex-col gap-1 max-w-xl mx-auto"
+      className="flex flex-col gap-1 max-w-xl mx-auto mb-4"
     >
       <h2 className="font-satoshi font-bold text-gray-600 text-xl">
         Article
