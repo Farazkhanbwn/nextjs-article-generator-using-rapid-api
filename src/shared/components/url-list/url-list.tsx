@@ -6,9 +6,14 @@ import useArticleStore from "@/shared/hooks/use-article-store";
 const UrlList = () => {
   const { urlList, setSelectedUrlActionForStore } = useArticleStore();
 
+  const copyUrlToClipboard = async (url: string) => {
+    await navigator.clipboard.writeText(url);
+  };
+
   const handleSelectedUrl = (url: string) => {
     // Write State Management Code Here
     setSelectedUrlActionForStore(url);
+    copyUrlToClipboard(url);
   };
 
   return (

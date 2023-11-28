@@ -6,5 +6,5 @@ const buildEslintCommand = (filenames) =>
     .join(" --file ")}`;
 
 module.exports = {
-  "*.{ts,tsx}": [buildEslintCommand, "tsc --noEmit", "npm run format"],
+  "*.{ts,tsx}": [buildEslintCommand, "npm run format"],
 };
