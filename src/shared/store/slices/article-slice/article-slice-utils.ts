@@ -1,11 +1,24 @@
-import { ActionReducerMapBuilder } from "@reduxjs/toolkit";
+import { ActionReducerMapBuilder, PayloadAction } from "@reduxjs/toolkit";
 import { ArticleStoreState } from "./article-slice.interface";
 import { fetchArticleSummaryForUrl } from "./article-slice-thunk";
 
 export const saveGeneratedArticleSummaryUrlsSnapshot = (
   urlList: Array<string>,
 ) => {
+  const localData = localStorage.getItem("urls");
+
+  if (localData) {
+    const parseData = JSON.parse(localData);
+    localStorage.setItem("urls", parseData);
+  }
   localStorage.setItem("urls", JSON.stringify(urlList));
+};
+
+export const updateUrls = (
+  state: ArticleStoreState,
+  action: PayloadAction<string[]>,
+) => {
+  state.urlList = action.payload;
 };
 
 export const createArticleActionTypeReducer = (

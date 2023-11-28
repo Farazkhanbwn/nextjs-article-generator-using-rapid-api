@@ -1,4 +1,4 @@
-import React, { FormEvent } from "react";
+import React, { FormEvent, useEffect } from "react";
 import EnterIcon from "@/shared/icons/enter-icon";
 import LinkIcon from "@/shared/icons/link-icon";
 import CustomButton from "../custom-button/custom-button";
@@ -8,7 +8,17 @@ import { CustomInputFieldType } from "../custom-input-field/custom-input.types";
 import useArticleStore from "@/shared/hooks/use-article-store";
 
 const UrlInputForm = () => {
-  const { generateArticleDataFromUrlForStore } = useArticleStore();
+  const { generateArticleDataFromUrlForStore, updateUrlsList } =
+    useArticleStore();
+
+  useEffect(() => {
+    const localData = localStorage.getItem("urls");
+
+    if (localData) {
+      const parsedData = JSON.parse(localData);
+      updateUrlsList([...parsedData]);
+    }
+  }, []);
 
   const onSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
