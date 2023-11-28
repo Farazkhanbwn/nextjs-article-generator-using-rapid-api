@@ -8,6 +8,7 @@ const ArticleSummary = () => {
   if (!summary && !isLoading) {
     return null;
   }
+
   return (
     <PageContainer
       loading={isLoading}
