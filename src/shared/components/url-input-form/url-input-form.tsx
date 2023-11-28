@@ -21,8 +21,6 @@ const UrlInputForm = () => {
     generateArticleDataFromUrlForStore(url);
   };
 
-  console.log("selected Url is : ", selectedUrl);
-
   return (
     <form className="relative max-w-xl w-full mx-auto mb-3" onSubmit={onSubmit}>
       <LinkIcon

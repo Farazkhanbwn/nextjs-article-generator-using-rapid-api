@@ -11,7 +11,6 @@ export const CustomInputField: React.FC<CustomInputFieldProps> = ({
   className,
   required = false,
 }) => {
-  console.log("value is : ", value);
   return (
     <div>
       <input
