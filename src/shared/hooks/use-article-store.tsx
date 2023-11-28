@@ -1,3 +1,4 @@
+import { updateUrlList } from "../store/slices/article-slice/article-slice-reducer";
 import { setSelectedUrlReducer } from "../store/slices/article-slice/article-slice-reducer";
 import { fetchArticleSummaryForUrl } from "../store/slices/article-slice/article-slice-thunk";
 import { AppDispatch, RootState } from "../store/store";
@@ -14,6 +15,9 @@ const useArticleStore = () => {
     dispatch(fetchArticleSummaryForUrl(url));
   };
 
+  const updateUrlsList = (url: string[]) => {
+    dispatch(updateUrlList(url));
+  };
   const setSelectedUrlActionForStore = (url: string) => {
     dispatch(setSelectedUrlReducer(url));
   };
@@ -22,6 +26,7 @@ const useArticleStore = () => {
     summary,
     isLoading,
     urlList,
+    updateUrlsList,
     selectedUrl,
     generateArticleDataFromUrlForStore,
     setSelectedUrlActionForStore,
