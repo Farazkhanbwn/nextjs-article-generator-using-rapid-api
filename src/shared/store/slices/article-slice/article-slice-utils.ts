@@ -28,6 +28,15 @@ export const setSelectedUrl = (
   state.selectedUrl = action.payload;
 };
 
+const addUniqueUrlToUrlList = (urlList: string[], newUrl: string) => {
+  if (urlList.includes(newUrl)) {
+    return;
+  }
+
+  urlList.unshift(newUrl);
+  saveGeneratedArticleSummaryUrlsSnapshot(urlList);
+};
+
 export const createArticleActionTypeReducer = (
   builder: ActionReducerMapBuilder<ArticleStoreState>,
 ) => {
@@ -38,7 +47,6 @@ export const createArticleActionTypeReducer = (
     .addCase(fetchArticleSummaryForUrl.fulfilled, (state, action) => {
       state.isLoading = false;
       state.summary = action.payload.message;
-      state.urlList.unshift(action.payload.articleUrl);
-      saveGeneratedArticleSummaryUrlsSnapshot(state.urlList);
+      addUniqueUrlToUrlList(state.urlList, action.payload.articleUrl);
     });
 };
