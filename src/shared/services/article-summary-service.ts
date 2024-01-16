@@ -28,6 +28,7 @@ class ArticleSummaryService extends HttpClient {
     const data = await this.get(urlPath, {
       ...rapidApiCredentials,
     });
+    console.log("data ", data);
 
     return data;
   }
