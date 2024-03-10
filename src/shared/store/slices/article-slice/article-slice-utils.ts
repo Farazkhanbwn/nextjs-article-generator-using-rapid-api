@@ -46,7 +46,7 @@ export const createArticleActionTypeReducer = (
     })
     .addCase(fetchArticleSummaryForUrl.fulfilled, (state, action) => {
       state.isLoading = false;
-      state.summary = action.payload.message;
+      state.summary = action?.payload?.summary;
       addUniqueUrlToUrlList(state.urlList, action.payload.articleUrl);
     });
 };
